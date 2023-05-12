@@ -11,6 +11,9 @@
       <div class="row">
           <div class="col-md-6">
               <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+              <a th:if="${userName != null}" href="/logout" class="btn btn-info active" role="button">logout</a>
+              <a th:if="${userName == null}" href="/oauth2/authorization/google" class="btn btn-success active" role="button">google login</a>
+              <input type="text" th:value="${userName}" readonly>
           </div>
       </div>
   </div>
